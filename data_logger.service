@@ -1,0 +1,15 @@
+[Unit]
+Description=ESP32 USB Data Logger
+After=network.target
+
+[Service]
+ExecStart=/home/roman/data_logger/logger.py
+WorkingDirectory=/home/roman/data_logger
+StandardOutput=journal
+StandardError=journal
+Restart=always
+User=roman
+
+[Install]
+WantedBy=multi-user.target
+
